@@ -1,3 +1,4 @@
+import html
 import io
 
 import numpy as np
@@ -59,8 +60,10 @@ def show(raw: bytes, key: str, timestamps: bool):
         return
 
     st.markdown(
-        f"<div dir='rtl' style='font-size:1.2rem;line-height:2;text-align:right;"
-        f"background:#f6f6f8;border-radius:8px;padding:1rem'>{res['text']}</div>",
+        "<div dir='rtl' style='font-size:1.2rem;line-height:2;text-align:right;"
+        "background:rgba(128,128,128,0.12);border-radius:8px;padding:1rem;"
+        "margin-bottom:1.25rem;overflow-wrap:break-word'>"
+        f"{html.escape(res['text'])}</div>",
         unsafe_allow_html=True,
     )
 
