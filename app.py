@@ -9,7 +9,7 @@ from scipy.signal import resample_poly
 MODEL_ID = "themohal/saraiki-whisper-small"
 SR = 16_000
 
-st.set_page_config(page_title="Saraiki Speech-to-Text", page_icon="🎙️")
+st.set_page_config(page_title="Saraiki Speech-to-Text (سرائیکی)", page_icon="🎙️")
 
 
 @st.cache_resource(show_spinner="Loading model…")
